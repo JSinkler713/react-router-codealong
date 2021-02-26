@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 
 const Procedures = ()=> {
     const procedures = [
@@ -11,7 +13,7 @@ const Procedures = ()=> {
     // map function to get an array of li items
     // with each procedure
     const procedureList = procedures.map((procedure, index)=> {
-        return <li key={index}>{procedure}</li>
+        return <li key={index}><Link to={`/procedures/${procedure}`}>{procedure}</Link></li>
     })
 
     return (
